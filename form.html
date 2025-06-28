@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <div>
+    <h1>Fill up the form</h1>
+    <form action="https://github.com/harinakhati">    
+        <label for="name" id="nameLabel">Enter your name:</label>
+        <input type="text" name ="name" placeholder="Enter your name" required/> <span style="color: red;">*</span>
+        <br>
+        <br>
+        <label for="email" id="emailLabel">Enter your email:</label>
+        <input type="email" name="email" placeholder="Enter your email" required    />
+        <br>
+        <br>
+        <input type="radio" name="gender" id="male"/>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female"/>
+        <label for="female" >Female</label>
+        <br>
+        <br>
+        <label for="about" id="aboutLabel">Short intro:</label>
+        <br>
+        <textarea rows="4" cols="3" required></textarea>
+        <br>
+        <br>
+        <b>What do you like?</b>
+        <br>
+        <select>
+            <option value="1">Reading</option>
+            <option value="2">Travelling</option>
+            <option value="3">Coding</option>
+            <option value="4">Sleeping</option>
+            <option value="5">Doing nothing</option>
+        </select>
+        <br>
+        <br>
+        <button>Submit</button>
+        <button>Reset</button>
+    </form>
+    </div>
+    
+    
+</body>
+</html>

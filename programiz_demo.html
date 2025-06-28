@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>self["MonacoEnvironment"] = (function (paths) {
+          return {
+            globalAPI: false,
+            getWorkerUrl : function (moduleId, label) {
+              var result =  paths[label];
+              if (/^((http:)|(https:)|(file:)|(\/\/))/.test(result)) {
+                var currentUrl = String(window.location);
+                var currentOrigin = currentUrl.substr(0, currentUrl.length - window.location.hash.length - window.location.search.length - window.location.pathname.length);
+                if (result.substring(0, currentOrigin.length) !== currentOrigin) {
+                  var js = '/*' + label + '*/importScripts("' + result + '");';
+                  var blob = new Blob([js], { type: 'application/javascript' });
+                  return URL.createObjectURL(blob);
+                }
+              }
+              return result;
+            }
+          };
+        })({
+  "editorWorkerService": "https://app.programiz.pro/monacoeditorwork/editor.worker.bundle.js",
+  "css": "https://app.programiz.pro/monacoeditorwork/css.worker.bundle.js",
+  "html": "https://app.programiz.pro/monacoeditorwork/html.worker.bundle.js",
+  "json": "https://app.programiz.pro/monacoeditorwork/json.worker.bundle.js",
+  "typescript": "https://app.programiz.pro/monacoeditorwork/ts.worker.bundle.js",
+  "javascript": "https://app.programiz.pro/monacoeditorwork/ts.worker.bundle.js",
+  "less": "https://app.programiz.pro/monacoeditorwork/css.worker.bundle.js",
+  "scss": "https://app.programiz.pro/monacoeditorwork/css.worker.bundle.js",
+  "handlebars": "https://app.programiz.pro/monacoeditorwork/html.worker.bundle.js",
+  "razor": "https://app.programiz.pro/monacoeditorwork/html.worker.bundle.js"
+});</script>
+
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://cdn.app.programiz.pro/img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Programiz PRO" />
+    <meta property="og:title" content="Programiz PRO" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:url" content="/img/social-media.png" />
+
+    <meta property="twitter:title" content="Programiz PRO">
+    <meta property="twitter:description" content=" Learn to Code.">
+    <meta property="twitter:image" content="/img/social-media.png">
+    <meta property="twitter:card" content="photo">
+    <meta property="twitter:url" content="https://dev.app.programiz.pro/">
+
+    <meta itemprop="name" content="Programiz PRO">
+    <meta itemprop="description" content=" Learn to Code.">
+    <meta itemprop="image" content="/img/social-media.png">
+
+    <link rel="apple-touch-icon" href="https://cdn.app.programiz.pro/img/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="https://cdn.app.programiz.pro/manifest.json" />
+    <link rel="stylesheet" href="https://fonts.programiz.com/fonts.css" />
+
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Programiz PRO</title>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer',"GTM-KWWQNXJ");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- ProfitWell -->
+    <script id="profitwell-js" data-pw-auth="e97e78d919e451933783fe3cf37877ff">
+      /* DO NOT DELETE - this code is used to accept our payments or send data to ProfitWell*/
+      (function(i,s,o,g,r,a,m){i[o]=i[o]||function(){(i[o].q=i[o].q||[]).push(arguments)};
+      a=s.createElement(g);m=s.getElementsByTagName(g)[0];a.async=1;a.src=r+'?auth='+
+      s.getElementById(o+'-js').getAttribute('data-pw-auth');m.parentNode.insertBefore(a,m);
+      })(window,document,'profitwell','script','https://public.profitwell.com/js/profitwell.js');
+    </script>
+    <!-- End ProfitWell -->
+
+    <!-- Google Analytics4 tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CJRSK8LXN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config',"G-4CJRSK8LXN");
+    </script>
+    <!-- End Google Analytics4 tag -->
+
+    <!-- Google UA Analytics tag -->
+    <script  src="https://www.googletagmanager.com/gtag/js?id=UA-36675496-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config',"UA-36675496-5",{'send_page_view': false});
+    </script>
+    <!-- End Google UA Analytics tag -->
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      if ('production' === 'production') {
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "jtuz5zbo0w");
+      }
+    </script>
+
+    <!-- Crisp (Customer Chat) -->
+    <script id="crisp" type="text/javascript">
+      if ('production' === 'production') {
+        window.$crisp=[];
+        window.CRISP_WEBSITE_ID="7e94d2f1-3c01-4892-b076-6356b36a3375";
+        (function(){
+          var d=document;
+          var s=d.createElement("script");
+          s.src="https://client.crisp.chat/l.js";
+          s.async=1;
+          d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+      }
+    </script>
+    <script type="module" crossorigin src="https://cdn.app.programiz.pro/assets/index-DDkM6hFI.js"></script>
+    <link rel="stylesheet" crossorigin href="https://cdn.app.programiz.pro/assets/index-gACn-yeU.css">
+  </head>
+  <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="google-tag-manager" src="https://www.googletagmanager.com/ns.html?id=GTM-KWWQNXJ"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+    <script>window.require = () => {}</script>
+    <script>window.module = () => {}</script>
+  </body>
+</html>
