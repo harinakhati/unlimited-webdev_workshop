@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Rubik:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        p{
+            color: rgb(11, 11, 12); !important;
+        }
+        div-nth-child(2) p {
+            color: blue;
+        }
+        
+        .para {
+            color: green;
+        }
+        .sleepy {
+            color: red;
+        }
+
+        /* div:not(:nth-child(2)) p {
+            color: green;
+        } */
+        /* .para:nth-child p:not(:nth-child(2)) {
+            color: blue;
+        } */
+
+        .para{
+            font-family: 'Bitcount Grid Double', sans-serif;
+            font-weight: 500;
+            font-style: italic;
+            font-size: 20px;
+            line-height: 2;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 5px;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        
+    </style>
+
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+
+</head>
+<body>
+    
+    <p style="color: brown;">
+This is a paragraph styled with CSS. The text color should be blue due to the CSS rule defined in the style block above. You can modify the CSS to change the appearance of this text, such as changing the font size, font family, or adding more styles like background color or padding.
+    </p>
+    <p class="para">This is another paragraph that should also be styled with the CSS rules defined in the linked stylesheet.</p>
+
+    <div>
+       <p class="sleepy"> I am sleepy now!!</p>
+    </div>
+    <div>
+        <p class="para">This is a paragraph with a class that should
+    </div>
+
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+        </tr>
+    </table>
+</body>
+</html>
